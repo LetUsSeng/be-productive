@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Be Productive — Settings</title>
+  <link rel="stylesheet" href="../shared.css">
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Be Productive</h1>
+      <p id="status" class="status"><span class="dot"></span><span id="status-text"></span></p>
+    </header>
+
+    <div id="lock-banner" class="banner lock" hidden>
+      <span>🔒 <strong id="lock-text"></strong> You can add sites and schedules, but not remove or edit them.</span>
+    </div>
+
+    <div id="incognito-banner" class="banner warn" hidden>
+      <span>⚠ Blocking is <strong>off in private windows</strong>. Turn on “Allow in Private” for this extension.</span>
+      <button id="open-extensions" type="button">Open extension settings</button>
+    </div>
+
+    <section>
+      <h2>Blocked sites</h2>
+      <p class="muted">Each site also blocks its subdomains — <code>youtube.com</code> covers <code>m.youtube.com</code>.</p>
+      <form id="site-form" class="row">
+        <input id="site-input" type="text" placeholder="e.g. reddit.com" autocomplete="off" spellcheck="false" aria-label="Site to block">
+        <button class="primary" type="submit">Add site</button>
+      </form>
+      <p id="site-error" class="error" role="alert"></p>
+      <ul id="site-list" class="site-list"></ul>
+      <p id="site-empty" class="muted empty">No sites yet.</p>
+    </section>
+
+    <section>
+      <h2>Schedules</h2>
+      <p class="muted">Sites are blocked whenever <em>any</em> schedule is active. A window that ends before it starts runs overnight into the next day.</p>
+      <ul id="schedule-list" class="schedule-list"></ul>
+      <p id="schedule-empty" class="muted empty">No schedules yet — nothing will be blocked.</p>
+
+      <form id="new-schedule" class="card new-schedule">
+        <h3>New schedule</h3>
+        <div class="schedule-fields"></div>
+        <div class="row">
+          <button class="primary" type="submit">Add schedule</button>
+        </div>
+        <p class="error" role="alert"></p>
+      </form>
+    </section>
+  </main>
+  <script type="module" src="options.js"></script>
+</body>
+</html>

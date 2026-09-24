@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Be Productive",
+  "version": "1.0.0",
+  "description": "Block distracting sites on a weekly schedule.",
+  "minimum_chrome_version": "120",
+  "permissions": ["storage", "alarms", "declarativeNetRequest", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Be Productive",
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "src/icons/16.png",
+      "48": "src/icons/48.png",
+      "128": "src/icons/128.png"
+    }
+  },
+  "options_page": "src/options/options.html",
+  "icons": {
+    "16": "src/icons/16.png",
+    "48": "src/icons/48.png",
+    "128": "src/icons/128.png"
+  },
+  "incognito": "spanning",
+  "web_accessible_resources": [
+    {
+      "resources": ["src/blocked/blocked.html"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

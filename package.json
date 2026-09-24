@@ -1,0 +1,10 @@
+{
+  "name": "be-productive",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Brave extension that blocks distracting sites on a weekly schedule.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  }
+}

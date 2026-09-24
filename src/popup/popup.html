@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Be Productive</title>
+  <link rel="stylesheet" href="../shared.css">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <div class="status">
+      <span class="dot" id="dot"></span>
+      <div>
+        <div id="status-title" class="title"></div>
+        <div id="status-detail" class="muted"></div>
+      </div>
+    </div>
+
+    <div id="current">
+      <button id="block-current" class="primary" type="button" hidden></button>
+      <p id="current-note" class="muted note" hidden></p>
+    </div>
+    <p id="error" class="error" role="alert"></p>
+
+    <div id="incognito-warning" class="banner warn" hidden>
+      <span>⚠ Not blocking in private windows.</span>
+    </div>
+
+    <button id="open-settings" type="button">Settings</button>
+  </main>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

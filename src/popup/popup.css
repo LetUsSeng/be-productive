@@ -1,0 +1,16 @@
+body { width: 300px; }
+
+main {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.status { display: flex; gap: 10px; align-items: baseline; }
+.title { font-weight: 600; font-size: 15px; }
+
+#block-current { width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.note { margin: 0; font-size: 13px; }
+
+.banner { font-size: 13px; padding: 8px 10px; }
