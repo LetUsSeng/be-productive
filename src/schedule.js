@@ -21,7 +21,7 @@ export function normalizeSite(input) {
   if (typeof input !== "string") return null;
   let text = input.trim().toLowerCase();
   if (!text) return null;
-  if (!/^[a-z][a-z0-9+.-]*:\/\//.test(text)) text = "http://" + text;
+  if (!/^[a-z][a-z0-9+.-]*:\/\//.test(text)) text = "https://" + text;
 
   let host;
   try {
